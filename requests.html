@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requests & Events | Alumni Connect</title>
+    <link rel="stylesheet" href="requests.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Alumni<span>Connect</span></div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="alumni.html">Alumni Directory</a>
+            <a href="requests.html" class="active">Requests & Events</a>
+            <a href="index.html" class="logout">Logout</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <div>
+                <p class="eyebrow">STAY CONNECTED</p>
+                <h1>Requests & Events</h1>
+                <p class="subtitle">
+                    Discover upcoming events, register your interest,
+                    and keep track of your requests.
+                </p>
+            </div>
+            <a href="#request-form" class="primary-btn">+ New Request</a>
+        </section>
+
+        <!-- SUMMARY CARDS -->
+        <section class="stats">
+            <article class="stat-card">
+                <div class="stat-icon purple">📅</div>
+                <p>Upcoming Events</p>
+                <h2 id="upcomingCount">03</h2>
+                <span>Events to explore</span>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon blue">📝</div>
+                <p>My Registrations</p>
+                <h2 id="registrationCount">0</h2>
+                <span>Interests submitted</span>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon orange">⏳</div>
+                <p>Pending Requests</p>
+                <h2 id="pendingCount">0</h2>
+                <span>Awaiting a response</span>
+            </article>
+        </section>
+
+        <!-- UPCOMING EVENTS -->
+        <section class="section">
+            <div class="section-heading">
+                <div>
+                    <h2>Upcoming Events</h2>
+                    <p>Meet, learn, and reconnect with fellow alumni.</p>
+                </div>
+                <a href="#all-events" class="text-link">View all events →</a>
+            </div>
+
+            <div class="event-grid" id="all-events">
+
+                <article class="event-card">
+                    <div class="event-banner banner-one">
+                        <span>NETWORKING</span>
+                        <div class="event-date">
+                            <strong>15</strong><small>NOV</small>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <p class="event-type">Alumni Meetup</p>
+                        <h3>Annual Alumni Reunion</h3>
+                        <p class="event-description">
+                            Reconnect with old classmates and meet graduates
+                            from different batches.
+                        </p>
+                        <div class="event-info">
+                            <span>📍 School Auditorium</span>
+                            <span>🕒 10:00 AM onwards</span>
+                        </div>
+                        <a href="#registration-form" class="register-btn"
+                           data-event="Annual Alumni Reunion">
+                            Register Interest →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-banner banner-two">
+                        <span>CAREER GROWTH</span>
+                        <div class="event-date">
+                            <strong>22</strong><small>NOV</small>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <p class="event-type">Career Session</p>
+                        <h3>Career Guidance Workshop</h3>
+                        <p class="event-description">
+                            Learn about career paths, interviews, and
+                            opportunities from experienced alumni.
+                        </p>
+                        <div class="event-info">
+                            <span>📍 Seminar Hall</span>
+                            <span>🕒 11:00 AM onwards</span>
+                        </div>
+                        <a href="#registration-form" class="register-btn"
+                           data-event="Career Guidance Workshop">
+                            Register Interest →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-banner banner-three">
+                        <span>COMMUNITY</span>
+                        <div class="event-date">
+                            <strong>05</strong><small>DEC</small>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <p class="event-type">Mentorship</p>
+                        <h3>Alumni Mentorship Day</h3>
+                        <p class="event-description">
+                            Connect current students with alumni for
+                            academic and professional guidance.
+                        </p>
+                        <div class="event-info">
+                            <span>📍 School Campus</span>
+                            <span>🕒 09:30 AM onwards</span>
+                        </div>
+                        <a href="#registration-form" class="register-btn"
+                           data-event="Alumni Mentorship Day">
+                            Register Interest →
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- MY REQUESTS -->
+        <section class="section request-section">
+            <div class="section-heading">
+                <div>
+                    <h2>My Requests</h2>
+                    <p>Track the requests you have submitted.</p>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Request Type</th>
+                            <th>Submitted On</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="requestTableBody">
+                        <tr>
+                            <td colspan="4">No requests submitted yet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SUBMIT A REQUEST -->
+        <section class="section form-section" id="request-form">
+            <div class="section-heading">
+                <div>
+                    <h2>Submit a Request</h2>
+                    <p>Send a request to the alumni administration team.</p>
+                </div>
+            </div>
+
+            <form id="requestForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" required
+                               placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required
+                               placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="request-type">Request Type</label>
+                        <select id="request-type" required>
+                            <option value="">Select request type</option>
+                            <option>Profile Update</option>
+                            <option>Event Registration</option>
+                            <option>Mentorship</option>
+                            <option>Alumni Verification</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <select id="priority" required>
+                            <option value="">Select priority</option>
+                            <option>Low</option>
+                            <option>Normal</option>
+                            <option>High</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="description">Request Description</label>
+                        <textarea id="description" rows="5" required
+                                  placeholder="Describe your request..."></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Submit Request
+                </button>
+                <p id="requestMessage" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <!-- SUBMIT EVENT INTEREST -->
+        <section class="section form-section" id="registration-form">
+            <div class="section-heading">
+                <div>
+                    <h2>Event Registration Interest</h2>
+                    <p>Choose an event and submit your interest.</p>
+                </div>
+            </div>
+
+            <form id="interestForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="attendee-name">Full Name</label>
+                        <input type="text" id="attendee-name" required
+                               placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attendee-email">Email Address</label>
+                        <input type="email" id="attendee-email" required
+                               placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="event-choice">Choose an Event</label>
+                        <select id="event-choice" required>
+                            <option value="">Select an event</option>
+                            <option>Annual Alumni Reunion</option>
+                            <option>Career Guidance Workshop</option>
+                            <option>Alumni Mentorship Day</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Submit Interest
+                </button>
+                <p id="interestMessage" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <!-- SAVED EVENT INTERESTS -->
+        <section class="section">
+            <div class="section-heading">
+                <div>
+                    <h2>My Event Interests</h2>
+                    <p>Events for which you have submitted interest.</p>
+                </div>
+            </div>
+            <div id="interestList">
+                <p>No event interests submitted yet.</p>
+            </div>
+        </section>
+
+        <footer>
+            © 2026 School Alumni Connect | Reconnecting Generations
+        </footer>
+
+    </main>
+
+    <script src="app.js"></script>
+    <script src="requests.js"></script>
+</body>
+</html>
+

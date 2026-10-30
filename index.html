@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Alumni Connect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">SA</span>
+            School Alumni Connect
+        </a>
+        <span class="tagline">Stay connected. Grow together.</span>
+    </header>
+
+    <main class="container">
+
+        <!-- Welcome section -->
+        <section class="welcome">
+            <p class="eyebrow">YOUR COMMUNITY, YOUR FUTURE</p>
+
+            <h1>Every connection can open a new door.</h1>
+
+            <p class="description">
+                Reconnect with classmates, discover opportunities,
+                and stay connected with your school community.
+            </p>
+
+            <div class="benefit">
+                <span class="number">01</span>
+                <div>
+                    <h3>Reconnect</h3>
+                    <p>Find classmates and build meaningful connections.</p>
+                </div>
+            </div>
+
+            <div class="benefit">
+                <span class="number">02</span>
+                <div>
+                    <h3>Discover</h3>
+                    <p>Explore alumni experiences and opportunities.</p>
+                </div>
+            </div>
+
+            <div class="benefit">
+                <span class="number">03</span>
+                <div>
+                    <h3>Contribute</h3>
+                    <p>Share your experiences with the community.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login section -->
+        <section class="auth-card" id="login">
+
+            <div class="card-heading">
+                <p class="eyebrow">WELCOME BACK</p>
+                <h2>Sign in to your account</h2>
+                <p>Enter your details to continue.</p>
+            </div>
+
+            <form action="dashboard.html" method="get">
+
+                <label>Choose your role</label>
+
+                <div class="role-options">
+                    <label class="role">
+                        <input type="radio" name="role" value="student" checked>
+                        <span>Student</span>
+                    </label>
+
+                    <label class="role">
+                        <input type="radio" name="role" value="alumni">
+                        <span>Alumni</span>
+                    </label>
+
+                    <label class="role">
+                        <input type="radio" name="role" value="admin">
+                        <span>Admin</span>
+                    </label>
+                </div>
+
+                <label for="email">Email address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <div class="form-options">
+                    <label class="remember">
+                        <input type="checkbox" name="remember">
+                        Remember me
+                    </label>
+                    <span class="help">Account assistance</span>
+                </div>
+
+                <button type="submit" class="primary-button">
+                    Sign In &rarr;
+                </button>
+
+                <p class="note">
+                    Login functionality will be added later.
+                </p>
+            </form>
+
+            <div class="register-prompt">
+                <h3>New to the community?</h3>
+                <p>Create an account to get connected.</p>
+                <a href="#register" class="secondary-button">
+                    Create an Account
+                </a>
+            </div>
+
+            <!-- Registration form -->
+            <div class="register-section" id="register">
+
+                <p class="eyebrow">JOIN THE COMMUNITY</p>
+                <h2>Create your account</h2>
+                <p class="register-description">
+                    Enter your details to get started.
+                </p>
+
+                <form action="#" method="get">
+
+                    <label for="fullname">Full name</label>
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="Your full name"
+                        required
+                    >
+
+                    <label for="newemail">Email address</label>
+                    <input
+                        type="email"
+                        id="newemail"
+                        name="newemail"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                    <label for="newrole">I am a</label>
+                    <select id="newrole" name="newrole" required>
+                        <option value="" disabled selected>
+                            Select your role
+                        </option>
+                        <option value="student">Student</option>
+                        <option value="alumni">Alumni</option>
+                    </select>
+
+                    <label for="newpassword">Create password</label>
+                    <input
+                        type="password"
+                        id="newpassword"
+                        name="newpassword"
+                        placeholder="Create a password"
+                        required
+                    >
+
+                    <button type="submit" class="primary-button">
+                        Register &rarr;
+                    </button>
+
+                    <p class="note">
+                        Registration functionality will be added later.
+                    </p>
+                </form>
+
+                <a href="#login" class="back-link">
+                    Already registered? Sign in
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 School Alumni Connect</p>
+        <p>One school. Many journeys. A connected future.</p>
+    </footer>
+    <script src="app.js"></script>
+
+</body>
+</html>

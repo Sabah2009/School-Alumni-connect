@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | School Alumni Connect</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="topbar">
+        <a href="dashboard.html" class="brand">
+            <span class="brand-icon">SA</span>
+            <span>School Alumni Connect</span>
+        </a>
+
+        <nav class="top-links">
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="alumni.html">Alumni Directory</a>
+            <a href="requests.html">Requests</a>
+            <a href="index.html" class="logout">Sign Out</a>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+
+        <!-- Welcome section -->
+        <section class="welcome-row">
+            <div>
+                <p class="eyebrow">YOUR ALUMNI COMMUNITY</p>
+                <h1>Dashboard</h1>
+                <p class="muted">
+                    A quick overview of your school community.
+                </p>
+            </div>
+
+            <div class="user-badge">
+                <span class="avatar">S</span>
+                <div>
+                    <strong>Student User</strong>
+                    <small>Community Member</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live statistics -->
+        <section class="stats-grid">
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon blue">A</span>
+                    <span class="stat-label">Community</span>
+                </div>
+                <h2 id="communityCount">0</h2>
+                <p>Alumni members</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon purple">E</span>
+                    <span class="stat-label">Your activity</span>
+                </div>
+                <h2 id="registrationCount">0</h2>
+                <p>Event registrations</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon orange">R</span>
+                    <span class="stat-label">Your activity</span>
+                </div>
+                <h2 id="pendingCount">0</h2>
+                <p>Pending requests</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-icon green">N</span>
+                    <span class="stat-label">Updates</span>
+                </div>
+                <h2 id="announcementCount">3</h2>
+                <p>Announcements</p>
+            </article>
+
+        </section>
+
+        <!-- Main content -->
+        <section class="content-grid">
+
+            <!-- Announcements -->
+            <div class="panel announcements">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">STAY INFORMED</p>
+                        <h2>Latest Announcements</h2>
+                    </div>
+                    <span class="count">3 updates</span>
+                </div>
+
+                <article class="announcement">
+                    <span class="announcement-dot blue-dot"></span>
+                    <div>
+                        <h3>Annual Alumni Meet</h3>
+                        <p>
+                            Reconnect with former classmates at our upcoming
+                            alumni gathering.
+                        </p>
+                        <small>Events</small>
+                    </div>
+                </article>
+
+                <article class="announcement">
+                    <span class="announcement-dot purple-dot"></span>
+                    <div>
+                        <h3>Career Guidance Session</h3>
+                        <p>
+                            Learn from alumni about career paths, interviews,
+                            and professional skills.
+                        </p>
+                        <small>Careers</small>
+                    </div>
+                </article>
+
+                <article class="announcement">
+                    <span class="announcement-dot orange-dot"></span>
+                    <div>
+                        <h3>Update Your Profile</h3>
+                        <p>
+                            Keep your education and contact information up to date.
+                        </p>
+                        <small>Community reminder</small>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Upcoming events -->
+            <div class="panel events">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">SAVE THE DATE</p>
+                        <h2>Upcoming Events</h2>
+                    </div>
+                    <a href="requests.html" class="text-link">View all</a>
+                </div>
+
+                <article class="event">
+                    <div class="event-date">
+                        <strong>15</strong>
+                        <span>NOV</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Annual Alumni Reunion</h3>
+                        <p>School Auditorium</p>
+                        <span class="event-type">Community</span>
+                    </div>
+                </article>
+
+                <article class="event">
+                    <div class="event-date purple-date">
+                        <strong>22</strong>
+                        <span>NOV</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Career Guidance Workshop</h3>
+                        <p>Online Session</p>
+                        <span class="event-type purple-type">Learning</span>
+                    </div>
+                </article>
+
+                <article class="event">
+                    <div class="event-date orange-date">
+                        <strong>05</strong>
+                        <span>DEC</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Alumni Mentorship Day</h3>
+                        <p>School Conference Hall</p>
+                        <span class="event-type orange-type">Workshop</span>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+
+        <!-- Quick access links -->
+        <section class="quick-section">
+            <div class="section-heading">
+                <p class="eyebrow">GET STARTED</p>
+                <h2>Quick Access</h2>
+                <p class="muted">
+                    Jump directly to a section of the platform.
+                </p>
+            </div>
+
+            <div class="quick-grid">
+
+                <a href="alumni.html" class="quick-card">
+                    <span class="quick-icon blue">01</span>
+                    <span>
+                        <strong>Alumni Directory</strong>
+                        <small>Explore and manage alumni profiles</small>
+                    </span>
+                    <span class="arrow">&rarr;</span>
+                </a>
+
+                <a href="requests.html" class="quick-card">
+                    <span class="quick-icon purple">02</span>
+                    <span>
+                        <strong>Requests & Events</strong>
+                        <small>Submit requests and register interest</small>
+                    </span>
+                    <span class="arrow">&rarr;</span>
+                </a>
+
+                <a href="index.html" class="quick-card">
+                    <span class="quick-icon orange">03</span>
+                    <span>
+                        <strong>Account</strong>
+                        <small>Return to the sign-in page</small>
+                    </span>
+                    <span class="arrow">&rarr;</span>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 School Alumni Connect</p>
+        <p>Connecting generations, building futures.</p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="app.js"></script>
+    <script src="dashboard.js"></script>
+
+</body>
+</html>
+
