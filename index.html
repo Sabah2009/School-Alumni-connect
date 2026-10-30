@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    <!-- Navigation -->
     <header class="navbar">
         <a href="index.html" class="logo">
             <span class="logo-icon">SA</span>
@@ -61,10 +62,10 @@
             <div class="card-heading">
                 <p class="eyebrow">WELCOME BACK</p>
                 <h2>Sign in to your account</h2>
-                <p>Enter your details to continue.</p>
+                <p>Enter your registered details to continue.</p>
             </div>
 
-            <form action="dashboard.html" method="get">
+            <form id="login-form">
 
                 <label>Choose your role</label>
 
@@ -85,10 +86,10 @@
                     </label>
                 </div>
 
-                <label for="email">Email address</label>
+                <label for="identifier">Email address</label>
                 <input
                     type="email"
-                    id="email"
+                    id="identifier"
                     name="email"
                     placeholder="you@example.com"
                     required
@@ -115,9 +116,11 @@
                     Sign In &rarr;
                 </button>
 
-            
+                <p id="loginMessage" class="note" aria-live="polite"></p>
+
             </form>
 
+            <!-- Registration prompt -->
             <div class="register-prompt">
                 <h3>New to the community?</h3>
                 <p>Create an account to get connected.</p>
@@ -126,7 +129,7 @@
                 </a>
             </div>
 
-            <!-- Registration form -->
+            <!-- Registration section -->
             <div class="register-section" id="register">
 
                 <p class="eyebrow">JOIN THE COMMUNITY</p>
@@ -135,7 +138,7 @@
                     Enter your details to get started.
                 </p>
 
-                <form action="#" method="get">
+                <form id="registration-form">
 
                     <label for="fullname">Full name</label>
                     <input
@@ -170,6 +173,7 @@
                         id="newpassword"
                         name="newpassword"
                         placeholder="Create a password"
+                        minlength="6"
                         required
                     >
 
@@ -177,9 +181,9 @@
                         Register &rarr;
                     </button>
 
-                    <p class="note">
-                        Registration functionality will be added later.
-                    </p>
+                    <p id="registrationMessage" class="note"
+                       aria-live="polite"></p>
+
                 </form>
 
                 <a href="#login" class="back-link">
@@ -191,11 +195,14 @@
 
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 School Alumni Connect</p>
         <p>One school. Many journeys. A connected future.</p>
     </footer>
+
     <script src="app.js"></script>
 
 </body>
 </html>
+
